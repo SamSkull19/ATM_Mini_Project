@@ -120,20 +120,24 @@ int main()
                 cin >> choice;              // taking user choice
                 cout << endl;
 
-                switch(choice){             // switch condition
-                    case 1: 
+                system("cls");
+            
+                do{
+                    if(choice == 1){             
                         cout << "\t Balance : " << Information.getBalance() << endl;
                         getch();
                         break;
+                    }
                     
-                    case 2:
+                    else if(choice == 2){
                         cout << "\t Enter Cash Withdraw Amount : ";
                         cin >> cash_withdraw;
                         Information.setBalance(cash_withdraw);
                         getch();
                         break;
+                    }
 
-                    case 3:
+                    else if(choice == 3){
                         cout << "\t User Information " << endl;
                         cout << "\t Name : " << Information.getName() << endl;
                         cout << "\t Account Number : " << Information.getAccountNumber() << endl;
@@ -141,8 +145,9 @@ int main()
                         cout << "\t Mobile Number : " << Information.getmobileNumber() << endl;
                         getch();
                         break;
+                    }
 
-                    case 4:
+                    else if(choice == 4){
                         cout << "\t Enter Old Number : ";
                         cin >> Old_num;
                         cout << "\t Enter New Number : ";
@@ -150,19 +155,26 @@ int main()
                         Information.setMobile(Old_num,New_num);
                         getch();
                         break;
+                    }
                     
-                    case 5:
+                    else if(choice == 5){
                         exit(0);
+                    }
 
-                    default:
+                    else{
                         cout << "\t Enter Valid Choice " << endl;
                         getch();
                         break;
-                }
+                    }
+
+                }while(1);
 
         }while(1);      // MENU	   // condition will always TRUE and loop is capable of running infinite times
 
+    system("cls");
+
     }
+
 
         else{
                 cout << "\t Invalid Choice " << endl;
